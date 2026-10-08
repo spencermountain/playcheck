@@ -1,0 +1,37 @@
+{
+  "name": "playcheck-",
+  "version": "0.0.1",
+  "description": "determine if media-files play properly in browsers",
+  "repository": "github:spencermountain/playcheck",
+  "author": "Spencer Kelly <spencermountain@gmail.com> (https://spencermountain.dev)",
+  "minimumReleaseAge": "1 day",
+  "scripts": {
+    "build": "rollup -c playcheck --silent",
+    "test": "tape \"tests/*.test.js\" | tap-dancer",
+    "watch": "node --watch scratch.js",
+    "lint": "eslint ."
+  },
+  "type": "module",
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "builds",
+    "types"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "prettier": {
+    "trailingComma": "none",
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 100
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tape": "^5.10.2",
+    "tap-dancer": "0.4.2",
+    "eslint": "10.11.0"
+  },
+  "license": "MIT"
+}
