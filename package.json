@@ -1,25 +1,28 @@
 {
-  "name": "playcheck-",
+  "name": "playcheck",
   "version": "0.0.1",
   "description": "determine if media-files play properly in browsers",
   "repository": "github:spencermountain/playcheck",
   "author": "Spencer Kelly <spencermountain@gmail.com> (https://spencermountain.dev)",
   "minimumReleaseAge": "1 day",
   "scripts": {
-    "build": "rollup -c playcheck --silent",
-    "test": "tape \"tests/*.test.js\" | tap-dancer",
-    "watch": "node --watch scratch.js",
-    "lint": "eslint ."
+    "test": "tape --strict './tests/**/*.test.js' | tap-dancer",
+    "watch": "node scratch.js",
+    "lint": "eslint .",
+    "update": "node scripts/01-update.js",
+    "fixtures": "node scripts/02-fixtures.js",
+    "browser": "node scripts/03-browser.js",
+    "verify:fixtures": "node scripts/05-verify-fixtures.js",
+    "prepublishOnly": "pnpm lint && pnpm test && pnpm run verify:fixtures"
   },
   "type": "module",
   "main": "src/index.js",
   "files": [
     "src",
-    "builds",
-    "types"
+    "cli"
   ],
   "engines": {
-    "node": ">=18"
+    "node": ">=24"
   },
   "prettier": {
     "trailingComma": "none",
@@ -33,5 +36,17 @@
     "tap-dancer": "0.4.2",
     "eslint": "10.11.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "bin": {
+    "playcheck": "cli/index.js"
+  },
+  "exports": "./src/index.js",
+  "keywords": [
+    "ffprobe",
+    "media",
+    "browser",
+    "audio",
+    "video",
+    "compatibility"
+  ]
 }

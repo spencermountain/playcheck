@@ -1,0 +1,478 @@
+{
+  "generatedAt": "2026-10-08T20:32:00.576Z",
+  "upstreamUpdatedAt": "2026-10-06T00:07:42.000Z",
+  "source": "https://raw.githubusercontent.com/Fyrd/caniuse/main/data.json",
+  "sha256": "70200795e76182e8274f110deed9579251634168561bb2b4e6c6da6c2382c9fb",
+  "browsers": {
+    "chrome": {
+      "name": "Chrome",
+      "version": "154"
+    },
+    "firefox": {
+      "name": "Firefox",
+      "version": "157"
+    },
+    "safari": {
+      "name": "Safari",
+      "version": "27"
+    },
+    "edge": {
+      "name": "Edge",
+      "version": "154"
+    },
+    "ios_saf": {
+      "name": "Safari on iOS",
+      "version": "27.0"
+    },
+    "and_chr": {
+      "name": "Chrome for Android",
+      "version": "154"
+    },
+    "and_ff": {
+      "name": "Firefox for Android",
+      "version": "157"
+    }
+  },
+  "features": {
+    "h264": {
+      "chrome": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Firefox supports H.264 on Windows 7 and later since version 21. Firefox supports H.264 on Linux since version 26 if the appropriate system libraries are installed.\r\n\r\nPartial support for older Firefox versions refers to the lack of support in OS X & some non-Android Linux platforms.",
+        "source": "https://caniuse.com/mpeg4"
+      },
+      "firefox": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Firefox supports H.264 on Windows 7 and later since version 21. Firefox supports H.264 on Linux since version 26 if the appropriate system libraries are installed.\r\n\r\nPartial support for older Firefox versions refers to the lack of support in OS X & some non-Android Linux platforms.",
+        "source": "https://caniuse.com/mpeg4"
+      },
+      "safari": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Firefox supports H.264 on Windows 7 and later since version 21. Firefox supports H.264 on Linux since version 26 if the appropriate system libraries are installed.\r\n\r\nPartial support for older Firefox versions refers to the lack of support in OS X & some non-Android Linux platforms.",
+        "source": "https://caniuse.com/mpeg4"
+      },
+      "edge": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Firefox supports H.264 on Windows 7 and later since version 21. Firefox supports H.264 on Linux since version 26 if the appropriate system libraries are installed.\r\n\r\nPartial support for older Firefox versions refers to the lack of support in OS X & some non-Android Linux platforms.",
+        "source": "https://caniuse.com/mpeg4"
+      },
+      "ios_saf": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Firefox supports H.264 on Windows 7 and later since version 21. Firefox supports H.264 on Linux since version 26 if the appropriate system libraries are installed.\r\n\r\nPartial support for older Firefox versions refers to the lack of support in OS X & some non-Android Linux platforms.",
+        "source": "https://caniuse.com/mpeg4"
+      },
+      "and_chr": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Firefox supports H.264 on Windows 7 and later since version 21. Firefox supports H.264 on Linux since version 26 if the appropriate system libraries are installed.\r\n\r\nPartial support for older Firefox versions refers to the lack of support in OS X & some non-Android Linux platforms.",
+        "source": "https://caniuse.com/mpeg4"
+      },
+      "and_ff": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Firefox supports H.264 on Windows 7 and later since version 21. Firefox supports H.264 on Linux since version 26 if the appropriate system libraries are installed.\r\n\r\nPartial support for older Firefox versions refers to the lack of support in OS X & some non-Android Linux platforms.",
+        "source": "https://caniuse.com/mpeg4"
+      }
+    },
+    "hevc": {
+      "chrome": {
+        "status": "conditional",
+        "raw": "a #5",
+        "note": "Supported for all devices on macOS (>= Big Sur 11.0) and Android (>= 5.0), for devices with [hardware support](https://github.com/StaZhu/enable-chromium-hevc-hardware-decoding) on Windows (>= Windows 8), and for devices with hardware support powered by VAAPI on Linux and ChromeOS",
+        "source": "https://caniuse.com/hevc"
+      },
+      "firefox": {
+        "status": "conditional",
+        "raw": "a #8",
+        "note": "Supported for devices with hardware support, software fallback in some cases. See [details here on MDN](https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Video_codecs#hevc_h.265).",
+        "source": "https://caniuse.com/hevc"
+      },
+      "safari": {
+        "status": "supported",
+        "raw": "y",
+        "note": "",
+        "source": "https://caniuse.com/hevc"
+      },
+      "edge": {
+        "status": "conditional",
+        "raw": "a #4",
+        "note": "Supported for all devices on macOS (>= Big Sur 11.0) and Android (>= 5.0) if Edge >= 107, for devices with [hardware support](https://techcommunity.microsoft.com/t5/discussions/updated-dev-channel-build-77-0-211-3-is-live/m-p/745801#M6548) on Windows (>= Windows 10 1709) when [HEVC video extensions from the Microsoft Store](https://apps.microsoft.com/store/detail/hevc-video-extension/9NMZLZ57R3T7) is installed",
+        "source": "https://caniuse.com/hevc"
+      },
+      "ios_saf": {
+        "status": "supported",
+        "raw": "y",
+        "note": "",
+        "source": "https://caniuse.com/hevc"
+      },
+      "and_chr": {
+        "status": "conditional",
+        "raw": "a #5",
+        "note": "Supported for all devices on macOS (>= Big Sur 11.0) and Android (>= 5.0), for devices with [hardware support](https://github.com/StaZhu/enable-chromium-hevc-hardware-decoding) on Windows (>= Windows 8), and for devices with hardware support powered by VAAPI on Linux and ChromeOS",
+        "source": "https://caniuse.com/hevc"
+      },
+      "and_ff": {
+        "status": "conditional",
+        "raw": "a #8",
+        "note": "Supported for devices with hardware support, software fallback in some cases. See [details here on MDN](https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Video_codecs#hevc_h.265).",
+        "source": "https://caniuse.com/hevc"
+      }
+    },
+    "av1": {
+      "chrome": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Edge has stopped supporting AV1 completely at some point prior to version 116 (additional information required).",
+        "source": "https://caniuse.com/av1"
+      },
+      "firefox": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Edge has stopped supporting AV1 completely at some point prior to version 116 (additional information required).",
+        "source": "https://caniuse.com/av1"
+      },
+      "safari": {
+        "status": "conditional",
+        "raw": "a #4",
+        "note": "Edge has stopped supporting AV1 completely at some point prior to version 116 (additional information required).\nSupported only on devices with hardware decoder, e.g. iPhone 15 Pro, M3 MacBook Pro, etc.",
+        "source": "https://caniuse.com/av1"
+      },
+      "edge": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Edge has stopped supporting AV1 completely at some point prior to version 116 (additional information required).",
+        "source": "https://caniuse.com/av1"
+      },
+      "ios_saf": {
+        "status": "conditional",
+        "raw": "a #4",
+        "note": "Edge has stopped supporting AV1 completely at some point prior to version 116 (additional information required).\nSupported only on devices with hardware decoder, e.g. iPhone 15 Pro, M3 MacBook Pro, etc.",
+        "source": "https://caniuse.com/av1"
+      },
+      "and_chr": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Edge has stopped supporting AV1 completely at some point prior to version 116 (additional information required).",
+        "source": "https://caniuse.com/av1"
+      },
+      "and_ff": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Edge has stopped supporting AV1 completely at some point prior to version 116 (additional information required).",
+        "source": "https://caniuse.com/av1"
+      }
+    },
+    "aac": {
+      "chrome": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/aac"
+      },
+      "firefox": {
+        "status": "conditional",
+        "raw": "a #1",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.\nPartial support in Firefox refers to only supporting AAC in an MP4 container and only when the operating system already has the codecs installed.",
+        "source": "https://caniuse.com/aac"
+      },
+      "safari": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/aac"
+      },
+      "edge": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/aac"
+      },
+      "ios_saf": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/aac"
+      },
+      "and_chr": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/aac"
+      },
+      "and_ff": {
+        "status": "conditional",
+        "raw": "a #1",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.\nPartial support in Firefox refers to only supporting AAC in an MP4 container and only when the operating system already has the codecs installed.",
+        "source": "https://caniuse.com/aac"
+      }
+    },
+    "opus": {
+      "chrome": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.\r\n\r\nFor Opera the Linux version may be able to play it when the GStreamer module is up to date and the served mime-type is 'audio/ogg'.",
+        "source": "https://caniuse.com/opus"
+      },
+      "firefox": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.\r\n\r\nFor Opera the Linux version may be able to play it when the GStreamer module is up to date and the served mime-type is 'audio/ogg'.",
+        "source": "https://caniuse.com/opus"
+      },
+      "safari": {
+        "status": "conditional",
+        "raw": "a #4",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.\r\n\r\nFor Opera the Linux version may be able to play it when the GStreamer module is up to date and the served mime-type is 'audio/ogg'.\nPartial support refers to requiring macOS 15.4 Sequoia or later.",
+        "source": "https://caniuse.com/opus"
+      },
+      "edge": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.\r\n\r\nFor Opera the Linux version may be able to play it when the GStreamer module is up to date and the served mime-type is 'audio/ogg'.",
+        "source": "https://caniuse.com/opus"
+      },
+      "ios_saf": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.\r\n\r\nFor Opera the Linux version may be able to play it when the GStreamer module is up to date and the served mime-type is 'audio/ogg'.",
+        "source": "https://caniuse.com/opus"
+      },
+      "and_chr": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.\r\n\r\nFor Opera the Linux version may be able to play it when the GStreamer module is up to date and the served mime-type is 'audio/ogg'.",
+        "source": "https://caniuse.com/opus"
+      },
+      "and_ff": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.\r\n\r\nFor Opera the Linux version may be able to play it when the GStreamer module is up to date and the served mime-type is 'audio/ogg'.",
+        "source": "https://caniuse.com/opus"
+      }
+    },
+    "mp3": {
+      "chrome": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/mp3"
+      },
+      "firefox": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/mp3"
+      },
+      "safari": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/mp3"
+      },
+      "edge": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/mp3"
+      },
+      "ios_saf": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/mp3"
+      },
+      "and_chr": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/mp3"
+      },
+      "and_ff": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/mp3"
+      }
+    },
+    "flac": {
+      "chrome": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/flac"
+      },
+      "firefox": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/flac"
+      },
+      "safari": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/flac"
+      },
+      "edge": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/flac"
+      },
+      "ios_saf": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/flac"
+      },
+      "and_chr": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/flac"
+      },
+      "and_ff": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/flac"
+      }
+    },
+    "vorbis": {
+      "chrome": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/ogg-vorbis"
+      },
+      "firefox": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/ogg-vorbis"
+      },
+      "safari": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/ogg-vorbis"
+      },
+      "edge": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/ogg-vorbis"
+      },
+      "ios_saf": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/ogg-vorbis"
+      },
+      "and_chr": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/ogg-vorbis"
+      },
+      "and_ff": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/ogg-vorbis"
+      }
+    },
+    "wav": {
+      "chrome": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/wav"
+      },
+      "firefox": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/wav"
+      },
+      "safari": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/wav"
+      },
+      "edge": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/wav"
+      },
+      "ios_saf": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/wav"
+      },
+      "and_chr": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/wav"
+      },
+      "and_ff": {
+        "status": "supported",
+        "raw": "y",
+        "note": "Support refers to this format's use in the `audio` element, not other conditions.",
+        "source": "https://caniuse.com/wav"
+      }
+    },
+    "webm": {
+      "chrome": {
+        "status": "supported",
+        "raw": "y",
+        "note": "",
+        "source": "https://caniuse.com/webm"
+      },
+      "firefox": {
+        "status": "supported",
+        "raw": "y",
+        "note": "",
+        "source": "https://caniuse.com/webm"
+      },
+      "safari": {
+        "status": "conditional",
+        "raw": "y #8",
+        "note": "Does not support alpha transparency",
+        "source": "https://caniuse.com/webm"
+      },
+      "edge": {
+        "status": "supported",
+        "raw": "y",
+        "note": "",
+        "source": "https://caniuse.com/webm"
+      },
+      "ios_saf": {
+        "status": "conditional",
+        "raw": "y #8",
+        "note": "Does not support alpha transparency",
+        "source": "https://caniuse.com/webm"
+      },
+      "and_chr": {
+        "status": "supported",
+        "raw": "y",
+        "note": "",
+        "source": "https://caniuse.com/webm"
+      },
+      "and_ff": {
+        "status": "supported",
+        "raw": "y",
+        "note": "",
+        "source": "https://caniuse.com/webm"
+      }
+    }
+  }
+}

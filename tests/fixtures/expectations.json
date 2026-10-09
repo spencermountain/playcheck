@@ -1,0 +1,14 @@
+[
+  {"rule":"codec-support","fail":"ac3.m4a","pass":"baseline.mp4"},
+  {"rule":"container-support","fail":"matroska.mkv","pass":"baseline.mp4"},
+  {"rule":"hevc-sample-entry","fail":"hevc-hev1.mp4","pass":"hevc-hvc1.mp4"},
+  {"rule":"vp9-profile","fail":"vp9-profile2.webm","pass":"vp9.webm"},
+  {"rule":"unusual-audio","fail":"ac3.m4a","pass":"stereo.m4a"},
+  {"rule":"hdr-color","fail":"hdr-metadata.mp4","pass":"hevc-hvc1.mp4"},
+  {"rule":"interlaced-video","fail":"interlaced.mp4","pass":"baseline.mp4"},
+  {"rule":"h264-pixel-format","fail":"h264-444.mp4","pass":"baseline.mp4"},
+  {"rule":"multichannel-audio","fail":"surround.m4a","pass":"stereo.m4a"},
+  {"rule":"mp4-faststart","fail":"late-index.mp4","pass":"baseline.mp4"},
+  {"rule":"mp4-structure-invalid","fail":"invalid-box.mp4","pass":"baseline.mp4"},
+  {"rule":"mp4-structure-limited","fail":"box-limit.mp4","pass":"baseline.mp4"}
+]

@@ -1,0 +1,153 @@
+{
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+  "platform": "MacIntel",
+  "recordedAt": "2026-10-08T21:07:44.556Z",
+  "limitations": [
+    "Muted playback; audibility and presentation not verified",
+    "Results apply only to this browser/device"
+  ],
+  "results": [
+    {
+      "file": "vp8.webm",
+      "loaded": true,
+      "played": true,
+      "sought": true,
+      "duration": 0.5,
+      "sha256": "1a5b497a827c3692aea68c908edccac4554c427f805f93c0b69c433f6939fe20"
+    },
+    {
+      "file": "vp9.webm",
+      "loaded": true,
+      "played": true,
+      "sought": true,
+      "duration": 0.5,
+      "sha256": "f1b5e71dcd5574800aa1f8fe3350a2fd0233fcfa4163b0e0fba15457dbff9dbf"
+    },
+    {
+      "file": "vp9-profile2.webm",
+      "loaded": true,
+      "played": true,
+      "sought": true,
+      "duration": 0.5,
+      "sha256": "975c198b64784b70fbdf1f81bde0869ba2520879050a76b7ecb9215ad732f219"
+    },
+    {
+      "file": "matroska.mkv",
+      "loaded": true,
+      "played": true,
+      "sought": true,
+      "duration": 0.5,
+      "sha256": "9e591a4ce04a230a3a36f56eb3bd65dfcd58f186b989f2315fa6f6a80a1ae65f"
+    },
+    {
+      "file": "hevc-hev1.mp4",
+      "loaded": true,
+      "played": true,
+      "sought": true,
+      "duration": 0.5,
+      "sha256": "7410e52ba14d961e56e47064168d95af0fcce5814c3c6f1ec50035e7b8e51880"
+    },
+    {
+      "file": "hevc-hvc1.mp4",
+      "loaded": true,
+      "played": true,
+      "sought": true,
+      "duration": 0.5,
+      "sha256": "22670c24c67447f9d0fc494b6cc85f412d6a33340ffb23745e6b8a2d66eb99fd"
+    },
+    {
+      "file": "hdr-metadata.mp4",
+      "loaded": true,
+      "played": true,
+      "sought": true,
+      "duration": 0.5,
+      "sha256": "4840f350b426a9ca544b77435aca25bd27e3aa837b1dc6ccd696c58f3554c9b5"
+    },
+    {
+      "file": "ac3.m4a",
+      "loaded": false,
+      "played": false,
+      "sought": false,
+      "error": "Media error 4: PipelineStatus::DEMUXER_ERROR_NO_SUPPORTED_STREAMS: FFmpegDemuxer: no supported streams",
+      "sha256": "0ceacc173fc0989fdfb2a6bd6c2c6792c998b335d5d50af5275f1aa199431eb7"
+    },
+    {
+      "file": "pcm.wav",
+      "loaded": true,
+      "played": true,
+      "sought": true,
+      "duration": 0.5,
+      "sha256": "165e7ddc5dc49172d3e5ee38e8df8b70420868a8f080b963b9a3b08fcea44435"
+    },
+    {
+      "file": "opus.ogg",
+      "loaded": true,
+      "played": true,
+      "sought": true,
+      "duration": 0.5065,
+      "sha256": "ef3b0533874b7d822e77d69a628bda48cc44290604943995b06f8cb30b8c2e77"
+    },
+    {
+      "file": "late-index.mp4",
+      "loaded": true,
+      "played": true,
+      "sought": true,
+      "duration": 0.5,
+      "sha256": "cd0463cf1cd63239ad3899c110381bce48be1122205e694ce5bb00fa3159761d"
+    },
+    {
+      "file": "fragmented.mp4",
+      "loaded": true,
+      "played": true,
+      "sought": true,
+      "duration": 0.5,
+      "sha256": "7b0dd044464cbaa53b8c909d87e6c8894c6acf0fa05b712e6df54432fd65feee"
+    },
+    {
+      "file": "baseline.mp4",
+      "loaded": true,
+      "played": true,
+      "sought": true,
+      "duration": 0.5,
+      "sha256": "4ee824e6c1aec77aac62929fc6443be585b82ee022d8477dd09c12d30c03a0a4"
+    },
+    {
+      "file": "h264-444.mp4",
+      "loaded": true,
+      "played": true,
+      "sought": true,
+      "duration": 0.5,
+      "sha256": "a57b6898dd642704c8407ffb2f843abe94eacd1669e2f85da6afdf44216b52ef"
+    },
+    {
+      "file": "interlaced.mp4",
+      "loaded": true,
+      "played": true,
+      "sought": true,
+      "duration": 0.5,
+      "sha256": "c027789600a14a48b3e1542062a4f516f0918a58ced12b84f7fc39d31d77ede4"
+    },
+    {
+      "file": "stereo.m4a",
+      "loaded": true,
+      "played": true,
+      "sought": true,
+      "duration": 0.5,
+      "sha256": "976a0acc2c8df147fc907112c13c6d2a1e08f4f2aba97a4e78cdb0773aed3d7d"
+    },
+    {
+      "file": "surround.m4a",
+      "loaded": true,
+      "played": true,
+      "sought": true,
+      "duration": 0.5,
+      "sha256": "73ff3dc79ebcbfddd0efa931dab7b2f34b5c514edc5e399269f8dbfc7b973d91"
+    }
+  ],
+  "host": {
+    "platform": "darwin",
+    "release": "23.6.0",
+    "arch": "arm64"
+  },
+  "environment": "Codex in-app Chromium browser; not a standalone Chrome installation"
+}
