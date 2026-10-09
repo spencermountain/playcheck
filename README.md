@@ -1,6 +1,6 @@
 <div align="center">
   <div><b>playcheck</b></div>
-  <div>ensure media files play properly in browsers</div>
+  <div>ensure media files play in browsers</div>
   <div><code>npm install playcheck</code></div>
   <div align="center">
     <sub>
@@ -8,7 +8,7 @@
       <a href="https://github.com/spencermountain">Spencer Kelly</a>
     </sub>
   </div>
-  <img height="25px" src="https://user-images.githubusercontent.com/399657/68221824-09809d80-ffb8-11e9-9ef0-6ed3574b0ce8.png"/>
+  <img height="32px" src="https://user-images.githubusercontent.com/399657/68221824-09809d80-ffb8-11e9-9ef0-6ed3574b0ce8.png"/>
 </div>
 <!--2nd row-->
 <div align="center">
@@ -22,32 +22,35 @@
 <!-- spacer -->
 <img height="20px" src="https://user-images.githubusercontent.com/399657/68221862-17ceb980-ffb8-11e9-87d4-7b30b6488f16.png"/>
 
-The `<video>` and `<audio>` tags were introduced in 2008, in the HTML5 spec - the idea was to point to a media file, and the browser will just play it.
+The `<video>` and `<audio>` tags were introduced in 2008 - the idea was to point to a media file, and the browser will just play it.
 
-In practice, reliable playback has proven difficult, based on complex media file internals, and the messy real-world.
+In practice, reliable playback has proven difficult, based on complex media file internals, in the messy real-world.
 
-Still 18 years later, different variants of different codecs are being adjusted and supported at a near-monthly rate, across all different browsers and platforms.
+18 years later, different variants of different codecs are being adjusted and supported (and dropped!), at a near-monthly rate, across different browsers and platforms, to little fanfare.
 
 <!-- spacer -->
 <div align="center">
   <img height="25px" src="https://user-images.githubusercontent.com/399657/68221862-17ceb980-ffb8-11e9-87d4-7b30b6488f16.png"/>
 </div>
 <div align="center">
-  <img height="50px" src="https://user-images.githubusercontent.com/399657/68221632-b9094000-ffb7-11e9-99e0-b48edd6cdf8a.png"/>
+  <img height="60px" src="https://user-images.githubusercontent.com/399657/68221632-b9094000-ffb7-11e9-99e0-b48edd6cdf8a.png"/>
 </div>
 
-This is a ***linter*** for audio and video files - a tool to inspect internal details and determine if given files are likely to play properly in modern browsers, of have any concerns.
+This library is a ***linter*** for audio and video files - a tool to inspect internal details and determine if given files are likely to play properly in modern browsers, of have any concerns.
 
 
 <!-- spacer -->
 <img height="20px" src="https://user-images.githubusercontent.com/399657/68221862-17ceb980-ffb8-11e9-87d4-7b30b6488f16.png"/>
 
-This is surprisingly difficult to get an answer to
-* not just because all of the arcane details about codecs,
-* not just because of the stone-age tooling,
-* but mostly - because it's hard to get straight-answers about browser support
+This is surprisingly difficult -
+* not just because all of the *arcane details* about codecs,
+* not just because of the *stone-age tooling*,
+* but mostly - because it's hard to get detailed answers about browser support
 
 This library is for validating only, and does not make any modifications to any files.
+
+<!-- spacer -->
+<img height="20px" src="https://user-images.githubusercontent.com/399657/68221862-17ceb980-ffb8-11e9-87d4-7b30b6488f16.png"/>
 
 #### Dependencies
 
@@ -73,7 +76,7 @@ npx playcheck /path/to/music/ballads --json
 ```js
 import { checkAudio, checkVideo, checkGlob } from 'playcheck'
 
-const resport = await checkVideo(input, {
+const report = await checkVideo('./movie.mp4', {
   browsers: ['chrome', 'firefox', 'safari']
 })
 console.log(report.issues)
@@ -88,6 +91,22 @@ console.log(report.issues)
 //   fix: [Object]
 // }]
 ```
+
+`checkVideo()` and `checkAudio()` each accept one file path and return its report
+with `issues`, `errors`, and `status`. Video checks include the file's audio tracks;
+`checkAudio()` expects an audio-only file.
+
+Use `checkGlob()` for files, directories, or glob patterns (or an array of these):
+
+```js
+const { files } = await checkGlob('./media/**/*.{mp4,m4a,webm}')
+files.forEach((file) => console.log(file.file, file.status, file.issues))
+```
+
+The batch result contains only `files`, with no accumulated issues or status.
+Each file report includes its own compatibility snapshot details. To select only
+video or audio files in a batch, pass `{ kind: 'video' }` or `{ kind: 'audio' }`.
+
 
 ---
 

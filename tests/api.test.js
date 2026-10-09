@@ -1,5 +1,5 @@
 import test from 'tape'
-import { checkAudio, checkVideo, checkAll } from '../src/index.js'
+import { checkAudio, checkVideo, checkGlob } from '../src/index.js'
 import analyze from '../src/analyze.js'
 
 const compatibility = {
@@ -13,7 +13,7 @@ const audio = { index: 1, codec_type: 'audio', codec_name: 'aac', channels: 2 }
 const inspect = (streams) => analyze({ streams, format: { format_name: 'mov,mp4,m4a,3gp,3g2,mj2', tags: { major_brand: 'isom' } } }, { compatibility, browsers: ['chrome'] })
 
 test('public entry points', (t) => {
-  ;[checkAudio, checkVideo, checkAll].forEach((fn) => t.equal(typeof fn, 'function'))
+  ;[checkAudio, checkVideo, checkGlob].forEach((fn) => t.equal(typeof fn, 'function'))
   t.end()
 })
 

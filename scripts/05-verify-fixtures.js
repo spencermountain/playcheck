@@ -4,7 +4,7 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { spawnSync } from 'node:child_process'
-import { checkAll, loadCompatibility, listRules } from '../src/index.js'
+import { checkGlob, loadCompatibility, listRules } from '../src/index.js'
 import analyze from '../src/analyze.js'
 import expectations from '../tests/fixtures/expectations.json' with { type: 'json' }
 
@@ -13,7 +13,7 @@ const output = await mkdtemp(join(tmpdir(), 'playcheck-fixes-'))
 const options = { browsers: ['chrome'] }
 const results = new Map()
 const inspect = async (name) => {
-  if (!results.has(name)) { results.set(name, await checkAll(join(directory, name), options)) }
+  if (!results.has(name)) { results.set(name, (await checkGlob(join(directory, name), options)).files[0]) }
   const result = results.get(name)
   assert.equal(result.errors.length, 0, `${name}: inspection failed`)
   return result
@@ -31,7 +31,7 @@ for (const { rule, fail, pass } of expectations) {
     args[args.length - 1] = join(output, `${rule}.mp4`)
     const converted = spawnSync(process.env.FFMPEG_PATH || 'ffmpeg', args, { encoding: 'utf8' })
     assert.equal(converted.status, 0, converted.stderr)
-    const fixed = await checkAll(args.at(-1), options)
+    const fixed = (await checkGlob(args.at(-1), options)).files[0]
     assert.equal(fixed.errors.length, 0)
     assert.ok(!fixed.issues.some((item) => item.rule === rule), `Fix should clear ${rule}`)
   }

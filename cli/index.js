@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import packageInfo from '../package.json' with { type: 'json' }
 import { parseArgs } from 'node:util'
-import { checkAll, checkAudio, checkVideo, listRules, loadCompatibility } from '../src/index.js'
+import { checkGlob, listRules, loadCompatibility } from '../src/index.js'
 import format from './format.js'
 
 const main = async () => {
@@ -34,15 +34,16 @@ const main = async () => {
   if (!positionals.length) { throw new Error('Provide a file, directory, or glob. Use --help for usage.') }
   if (values.audio && values.video) { throw new Error('Choose either --audio or --video') }
   if (!['error', 'warning'].includes(values['fail-on'])) { throw new Error('--fail-on must be error or warning') }
-  let check = checkAll
-  if (values.audio) { check = checkAudio }
-  if (values.video) { check = checkVideo }
-  const report = await check(positionals, {
+  let kind = 'all'
+  if (values.audio) { kind = 'audio' }
+  if (values.video) { kind = 'video' }
+  const report = await checkGlob(positionals, {
+    kind,
     os: values.os, overrides: values.overrides, browsers: values.browsers?.split(','), ffprobePath: values.ffprobe
   })
   console.log(values.json ? JSON.stringify(report, null, 2) : format(report, { color: process.stdout.isTTY && !('NO_COLOR' in process.env) }))
-  if (report.errors.length) { process.exitCode = 2 }
-  else if (report.issues.some((issue) => issue.severity === 'error' || (values['fail-on'] === 'warning' && issue.severity === 'warning'))) { process.exitCode = 1 }
+  if (report.files.some((file) => file.errors.length)) { process.exitCode = 2 }
+  else if (report.files.some((file) => file.issues.some((issue) => issue.severity === 'error' || (values['fail-on'] === 'warning' && issue.severity === 'warning')))) { process.exitCode = 1 }
 }
 
 try { await main() } catch (error) {
