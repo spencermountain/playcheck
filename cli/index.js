@@ -42,7 +42,7 @@ const main = async () => {
   })
   console.log(values.json ? JSON.stringify(report, null, 2) : format(report, { color: process.stdout.isTTY && !('NO_COLOR' in process.env) }))
   if (report.errors.length) { process.exitCode = 2 }
-  else if (report.failures.length || (values['fail-on'] === 'warning' && report.warnings.length)) { process.exitCode = 1 }
+  else if (report.issues.some((issue) => issue.severity === 'error' || (values['fail-on'] === 'warning' && issue.severity === 'warning'))) { process.exitCode = 1 }
 }
 
 try { await main() } catch (error) {

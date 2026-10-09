@@ -3,6 +3,8 @@ const format = (report, { color = false } = {}) => {
     if (!color) { return text }
     return `\u001b[${code}m${text}\u001b[0m`
   }
+  const failures = report.issues.filter((issue) => issue.severity === 'error').length
+  const warnings = report.issues.filter((issue) => issue.severity === 'warning').length
   const lines = []
   report.files.forEach((file) => {
     lines.push(`${file.file} — ${file.status}`)
@@ -17,7 +19,7 @@ const format = (report, { color = false } = {}) => {
     })
     file.errors.forEach((error) => lines.push(`  ${paint('error', 31)} ${error.message}`))
   })
-  lines.push(`\n${report.files.length} files, ${report.failures.length} errors, ${report.warnings.length} warnings, ${report.errors.length} inspection failures, ${report.skipped.length} skipped`)
+  lines.push(`\n${report.files.length} files, ${failures} errors, ${warnings} warnings, ${report.errors.length} inspection failures, ${report.skipped.length} skipped`)
   lines.push('Metadata inspection only; a pass is not a playback guarantee.')
   return lines.join('\n')
 }

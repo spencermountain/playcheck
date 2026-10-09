@@ -1,11 +1,9 @@
 const summarize = (issues, errors = []) => {
-  const warnings = issues.filter((issue) => issue.severity === 'warning')
-  const failures = issues.filter((issue) => issue.severity === 'error')
   let status = 'passed'
-  if (warnings.length) { status = 'warning' }
-  if (failures.length) { status = 'failed' }
+  if (issues.some((issue) => issue.severity === 'warning')) { status = 'warning' }
+  if (issues.some((issue) => issue.severity === 'error')) { status = 'failed' }
   if (errors.length) { status = 'error' }
-  return { status, issues, warnings, failures, errors }
+  return { status, issues, errors }
 }
 
 // Suggestions are POSIX shell commands; args remain portable for programmatic use.

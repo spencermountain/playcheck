@@ -19,7 +19,7 @@ test('public entry points', (t) => {
 
 test('ordinary AVC and AAC has no known failures', (t) => {
   const result = inspect([video, audio])
-  t.equal(result.failures.length, 0)
+  t.equal(result.issues.filter((issue) => issue.severity === 'error').length, 0)
   t.end()
 })
 
@@ -31,8 +31,8 @@ test('video checks include incompatible audio', (t) => {
 
 test('HDR and interlacing produce presentation warnings', (t) => {
   const result = inspect([{ ...video, color_transfer: 'smpte2084', field_order: 'tt' }])
-  t.ok(result.warnings.some((issue) => issue.rule === 'hdr-color'))
-  t.ok(result.warnings.some((issue) => issue.rule === 'interlaced-video'))
+  t.ok(result.issues.some((issue) => issue.severity === 'warning' && issue.rule === 'hdr-color'))
+  t.ok(result.issues.some((issue) => issue.severity === 'warning' && issue.rule === 'interlaced-video'))
   t.end()
 })
 
@@ -43,6 +43,6 @@ test('cover art does not turn audio into video', (t) => {
 })
 
 test('an empty media file is an error', (t) => {
-  t.ok(inspect([]).failures.some((issue) => issue.rule === 'no-media'))
+  t.ok(inspect([]).issues.some((issue) => issue.severity === 'error' && issue.rule === 'no-media'))
   t.end()
 })

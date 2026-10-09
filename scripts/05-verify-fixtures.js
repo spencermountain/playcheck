@@ -43,7 +43,7 @@ assert.ok(analyze(metadata, { compatibility, ...options }).issues.some((item) =>
 metadata.streams[0].profile = 'LC'
 assert.ok(!analyze(metadata, { compatibility, ...options }).issues.some((item) => item.rule === 'aac-profile'))
 checked.add('aac-profile')
-assert.ok(analyze({ streams: [] }, { compatibility, ...options }).failures.some((item) => item.rule === 'no-media'))
+assert.ok(analyze({ streams: [] }, { compatibility, ...options }).issues.some((item) => item.severity === 'error' && item.rule === 'no-media'))
 assert.ok(!analyze(metadata, { compatibility, ...options }).issues.some((item) => item.rule === 'no-media'))
 checked.add('no-media')
 assert.deepEqual([...checked].sort(), listRules().map((rule) => rule.id).sort())

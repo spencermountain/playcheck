@@ -1,6 +1,6 @@
 <div align="center">
   <div><b>playcheck</b></div>
-  <div>check if media files play properly in browsers</div>
+  <div>ensure media files play properly in browsers</div>
   <div><code>npm install playcheck</code></div>
   <div align="center">
     <sub>
@@ -22,22 +22,34 @@
 <!-- spacer -->
 <img height="20px" src="https://user-images.githubusercontent.com/399657/68221862-17ceb980-ffb8-11e9-87d4-7b30b6488f16.png"/>
 
-The `<video>` and `<audio>` tags were introduced in 2008, in the HTML5 spec. The idea was that you can simply point to a media file, and the browser will play it.
+The `<video>` and `<audio>` tags were introduced in 2008, in the HTML5 spec - the idea was to point to a media file, and the browser will just play it.
 
-In practice, reliable playback has proven difficult, based on how complex media file internals are in the messy real-world.
+In practice, reliable playback has proven difficult, based on complex media file internals, and the messy real-world.
 
-Still, at a monthly rate, different variants of different codecs are being supported and playback adjusted, across different browsers and platforms.
+Still 18 years later, different variants of different codecs are being adjusted and supported at a near-monthly rate, across all different browsers and platforms.
 
-This script aims to be a sort of *linter* for audio and video files - to inspect their internals and determine if they are likely to play properly in modern browsers.
+<!-- spacer -->
+<div align="center">
+  <img height="25px" src="https://user-images.githubusercontent.com/399657/68221862-17ceb980-ffb8-11e9-87d4-7b30b6488f16.png"/>
+</div>
+<div align="center">
+  <img height="50px" src="https://user-images.githubusercontent.com/399657/68221632-b9094000-ffb7-11e9-99e0-b48edd6cdf8a.png"/>
+</div>
 
-This question is surprisingly difficult to get an answer to
+This is a ***linter*** for audio and video files - a tool to inspect internal details and determine if given files are likely to play properly in modern browsers, of have any concerns.
+
+
+<!-- spacer -->
+<img height="20px" src="https://user-images.githubusercontent.com/399657/68221862-17ceb980-ffb8-11e9-87d4-7b30b6488f16.png"/>
+
+This is surprisingly difficult to get an answer to
 * not just because all of the arcane details about codecs,
 * not just because of the stone-age tooling,
 * but mostly - because it's hard to get straight-answers about browser support
 
 This library is for validating only, and does not make any modifications to any files.
 
-### Dependencies
+#### Dependencies
 
 [FFmpeg](https://www.ffmpeg.org/) must be installed, same with [Nodejs 24+](https://nodejs.org/en).
 
@@ -49,7 +61,7 @@ brew install ffmpeg
 sudo apt install ffmpeg
 ```
 
-### Usage
+## Usage
 ```bash
 npx playcheck /path/to/movies
 npx playcheck /path/to/movies/my-movie.mp4
@@ -57,12 +69,24 @@ npx playcheck /path/to/movies/my-movie.mp4
 npx playcheck /path/to/music/ballads --json
 ```
 
-### Js API
+#### Js API
 ```js
-import { checkAudio, checkVideo, checkAll } from 'playcheck'
+import { checkAudio, checkVideo, checkGlob } from 'playcheck'
 
-const {status, issues, warnings, failures} = await checkVideo('./Simpsons/S02/')
-
+const resport = await checkVideo(input, {
+  browsers: ['chrome', 'firefox', 'safari']
+})
+console.log(report.issues)
+// [{
+//   rule: 'mp4-faststart',
+//   severity: 'warning',
+//   message: 'The MP4 index follows media data. Startup may require extra requests or downloading file.',
+//   file: './tests/fixtures/late-index.mp4',
+//   category: 'delivery',
+//   evidence: [Object],
+//   support: [Object],
+//   fix: [Object]
+// }]
 ```
 
 ---
